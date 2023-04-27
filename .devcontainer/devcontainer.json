@@ -1,0 +1,11 @@
+{
+    "name": "Competition_Programming",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "GitHub.copilot",
+        "ms-vscode.cpptools"
+    ]
+}
