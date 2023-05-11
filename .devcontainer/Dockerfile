@@ -4,7 +4,8 @@ RUN pacman -Syyu --noconfirm \
     gcc \
     gdb \
     git \
-    python-pip
+    python-pip \
+    boost
 
 RUN pip3 install online-judge-verify-helper
 
