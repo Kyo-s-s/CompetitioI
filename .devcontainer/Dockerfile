@@ -7,6 +7,8 @@ RUN pacman -Syyu --noconfirm \
     python-pip \
     boost
 
+RUN pip3 install online-judge-tools
+
 RUN pip3 install online-judge-verify-helper
 
 WORKDIR /workspace

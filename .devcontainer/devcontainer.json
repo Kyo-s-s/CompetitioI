@@ -6,6 +6,7 @@
     "shutdownAction": "stopCompose",
     "extensions": [
         "GitHub.copilot",
-        "ms-vscode.cpptools"
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack"
     ]
 }
