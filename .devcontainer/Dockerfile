@@ -5,10 +5,23 @@ RUN pacman -Syyu --noconfirm \
     gdb \
     git \
     python-pip \
-    boost
+    boost \
+    ruby-bundler \
+    sudo
 
-RUN pip3 install online-judge-tools
+RUN python -m venv /workspace/venv
 
-RUN pip3 install online-judge-verify-helper
+ENV PATH="/workspace/venv/bin:$PATH"
+
+RUN pip install online-judge-tools
+RUN pip install online-judge-verify-helper
+
+ARG UID=1000
+ARG GID=1000
+RUN groupadd -g $GID dev \
+    && useradd -m -u ${UID} -g ${GID} dev \
+    && echo "dev ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+USER dev
 
 WORKDIR /workspace
