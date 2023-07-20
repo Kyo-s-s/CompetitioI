@@ -4,17 +4,17 @@ RUN pacman -Syyu --noconfirm \
     gcc \
     gdb \
     git \
-    python-pip \
     boost \
-    ruby-bundler \
+    python \
+    python-pipx \
     sudo
 
-RUN python -m venv /workspace/venv
 
-ENV PATH="/workspace/venv/bin:$PATH"
+RUN pipx install online-judge-tools
+RUN pipx install online-judge-verify-helper
 
-RUN pip install online-judge-tools
-RUN pip install online-judge-verify-helper
+RUN echo 'export PATH="/home/dev/.local/bin:$PATH"' >> ~/.bashrc
+RUN source ~/.bashrc
 
 ARG UID=1000
 ARG GID=1000
