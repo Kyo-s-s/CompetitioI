@@ -2,11 +2,13 @@
     "name": "Competition_Programming",
     "dockerComposeFile": "docker-compose.yml",
     "service": "dev",
-    "workspaceFolder": "/workspace",
+    "remoteUser": "dev",
+    "workspaceFolder": "/home/dev/work",
     "shutdownAction": "stopCompose",
     "extensions": [
         "GitHub.copilot",
         "ms-vscode.cpptools",
-        "ms-vscode.cpptools-extension-pack"
+        "ms-vscode.cpptools-extension-pack",
+        "draivin.hsnips"
     ]
 }
